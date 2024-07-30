@@ -1,0 +1,24 @@
+{
+  "name": "backend-coffe-delivery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^5.16.2",
+    "fastify": "^4.28.1",
+    "fastify-type-provider-zod": "^2.0.0",
+    "@fastify/cors": "^9.0.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "prisma": "^5.16.2",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
