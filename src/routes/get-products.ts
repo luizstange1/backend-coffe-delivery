@@ -10,17 +10,17 @@ export async function getProducts(app: FastifyInstance) {
       const products = await prisma.product.findMany({
         select: {
           id: true,
-          name_product: true,
-          details_product: true,
-          tag_product: true,
-          price_product: true,
+          name: true,
+          details: true,
+          tag: true,
+          price: true,
           image_path: true,
         },
       });
 
       const completeListOfProductsWithArrayOfTags = products.map((product) => ({
         ...product,
-        tag_product: JSON.parse(product.tag_product),
+        tag: JSON.parse(product.tag),
       }));
 
       return completeListOfProductsWithArrayOfTags;
